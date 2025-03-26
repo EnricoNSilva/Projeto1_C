@@ -22,6 +22,8 @@ int criarTarefa(ListaDeTarefas *lt){
     return 0;
 }
 
+int a;
+
 int deletarTarefa(ListaDeTarefas *lt){
    if (lt->qtd == 0)
    return 1;
