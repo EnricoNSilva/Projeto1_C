@@ -19,7 +19,7 @@ int criarTarefa(ListaDeTarefas *lt){
 
     lt->qtd++;
 
-    return 0;
+    return 0;//////
 }
 
 int a;
