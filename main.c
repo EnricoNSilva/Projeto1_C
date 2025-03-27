@@ -34,7 +34,7 @@ else if(codigo ==2)
 }
 else if(opcao == 3){
     codigo=listarTarefas(&lt);
-   if (codigo ==2)
+    if (codigo == 1) // Aqui estava 2, mas o código de erro na função seria return 1
    printf("Erro ao listar tarefas: nao existem tarefas para serem listadas");
 }
 else {
