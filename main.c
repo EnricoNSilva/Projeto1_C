@@ -48,5 +48,5 @@ printf("Erro ao salvar tarefas em arquivo");
 
 
 system ("pause");
-
+return 0; // A função main estava sem retorno
 }
