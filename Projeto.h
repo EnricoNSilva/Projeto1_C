@@ -17,6 +17,7 @@ int criarTarefa(ListaDeTarefas *lt);
 int deletarTarefa(ListaDeTarefas *lt);
 int listarTarefas(ListaDeTarefas *lt);
 
-int carregarTarefas(ListaDeTarefas *lt, char *nomes);
+int carregarTarefas(ListaDeTarefas *lt, char *nome); // Carregar tarefas estava recebendo um ponteiro chamado *nomes, o correto seria *nome
+
 int salvarTarefas(ListaDeTarefas *lt, char *nome);
 void exibeMenu();
