@@ -1,5 +1,6 @@
-#include "projeto.h"
-#include "stdio.h"
+#include "Projeto.h" // o nome correto para o arquivo de cabeçalho é "Projeto.h"
+#include <stdio.h> // o correto para bibliotecas padrão é ultilizar <>
+#include <stdlib.h> // o uso de <stdlib.h> é necessário para o uso de system()
 
 int main(){
 ListaDeTarefas lt;
@@ -7,11 +8,11 @@ ListaDeTarefas lt;
 char arquivo[] = "tarefas";
 int codigo, opcao;
 
-codigo=carregarTarefas(lt, arquivo);
+codigo=carregarTarefas(&lt, arquivo); //A função esperava um ponteiro e estava recebendo a variavel lt diretamente
 
 if (codigo !=0){
 printf("Lista de tarefas nao carregada");
-lt.qtd=2;
+lt.qtd = 0; // Alterado o valor de listas de 2 para 0
 }
 
 do{
@@ -33,7 +34,7 @@ else if(codigo ==2)
 }
 else if(opcao == 3){
     codigo=listarTarefas(&lt);
-   if (codigo ==2)
+    if (codigo == 1) // Aqui estava 2, mas o código de erro na função seria return 1
    printf("Erro ao listar tarefas: nao existem tarefas para serem listadas");
 }
 else {
@@ -42,10 +43,11 @@ else {
 }while (opcao != 0);
 
 codigo=salvarTarefas(&lt,arquivo);
-if(codigo ==0)
+if (codigo != 0) // Em SalvarTarefas, 0 significa sucesso e 1 significa erro
+//(Estava retornando Erro mesmo quando o arquivo era salvo)
 printf("Erro ao salvar tarefas em arquivo");
 
 
 system ("pause");
-
+return 0; // A função main estava sem retorno
 }
