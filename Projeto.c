@@ -1,6 +1,6 @@
-#include "projeto.h"
-#include "stdio.h"
-#include "string.h"
+#include "Projeto.h" // o nome correto para o arquivo de cabeçalho é "Projeto.h"
+#include <stdio.h> // o correto para bibliotecas padrão é ultilizar <>
+#include <string.h> // o correto para bibliotecas padrão é ultilizar <>
 
 int criarTarefa(ListaDeTarefas *lt){
     if(lt->qtd >= TOTAL_TAREFAS)
@@ -30,12 +30,12 @@ int deletarTarefa(ListaDeTarefas *lt){
    printf("Entre com a posicao que deseja deletar: ");
    scanf("%d", &pos);
    
-   if (pos <0 || pos < lt->qtd - 1)
+   if (pos <0 || pos > lt->qtd - 1) // O if estava verificando se < lt->qtd -1, porém deveria ser >, pois a posição não pode ser negativa
    return 2;
    
    for (; pos<lt->qtd-1; pos++){
    	lt->tarefas[pos].prioridade=lt->tarefas[pos+1].prioridade; 
-	   strcpy(lt->tarefas[pos].descricao, lt->tarefas[pos+1].categoria); 
+	   strcpy(lt->tarefas[pos].descricao, lt->tarefas[pos+1].descricao);  // estava copiando descrição para categoria
 	   strcpy(lt->tarefas[pos].categoria, lt->tarefas[pos+1].categoria);
 
    }
