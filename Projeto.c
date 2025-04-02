@@ -35,7 +35,7 @@ int deletarTarefa(ListaDeTarefas *lt){
    
    for (; pos<lt->qtd-1; pos++){
    	lt->tarefas[pos].prioridade=lt->tarefas[pos+1].prioridade; 
-	   strcpy(lt->tarefas[pos].descricao, lt->tarefas[pos+1].categoria); 
+	   strcpy(lt->tarefas[pos].descricao, lt->tarefas[pos+1].descricao);  // estava copiando descrição para categoria
 	   strcpy(lt->tarefas[pos].categoria, lt->tarefas[pos+1].categoria);
 
    }
