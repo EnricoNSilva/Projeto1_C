@@ -1,6 +1,6 @@
-#include "projeto.h"
-#include "stdio.h"
-#include "string.h"
+#include "Projeto.h" // o nome correto para o arquivo de cabeçalho é "Projeto.h"
+#include <stdio.h> // o correto para bibliotecas padrão é ultilizar <>
+#include <string.h> // o correto para bibliotecas padrão é ultilizar <>
 
 int criarTarefa(ListaDeTarefas *lt){
     if(lt->qtd >= TOTAL_TAREFAS)
