@@ -37,6 +37,13 @@ else if(opcao == 3){
     if (codigo == 1) // Aqui estava 2, mas o código de erro na função seria return 1
    printf("Erro ao listar tarefas: nao existem tarefas para serem listadas");
 }
+else if(opcao == 4){
+    codigo = alterarTarefa(&lt);
+if (codigo == 1)
+    printf("Erro ao alterar tarefa: Nao existem tarefas para alterar\n");
+else if (codigo == 2)
+    printf("Erro ao alterar tarefa: Posicao invalida\n");
+    }
 else {
 	printf("opcao invalida\n");
 }

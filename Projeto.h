@@ -21,3 +21,5 @@ int carregarTarefas(ListaDeTarefas *lt, char *nome); // Carregar tarefas estava 
 
 int salvarTarefas(ListaDeTarefas *lt, char *nome);
 void exibeMenu();
+
+int alterarTarefa(ListaDeTarefas *lt);

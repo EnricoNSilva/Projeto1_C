@@ -77,11 +77,68 @@ int salvarTarefas(ListaDeTarefas *lt, char *nome){
    return 0;
 }
 
+int alterarTarefa(ListaDeTarefas *lt){
+    if (lt->qtd == 0) {
+        return 1; // Caso não tenha tarefas, retorna erro
+    }
+
+    int pos;
+    printf("Posicao da tarefa que deseja alterar: ");
+    scanf("%d", &pos);
+    getchar();
+
+    if (pos < 0 || pos >= lt->qtd) {
+        return 2; // Posição inválida
+    }
+
+    Tarefa *t = &lt->tarefas[pos]; // Ponteiro para a tarefa a ser alterada
+
+    printf("Tarefa atual:\n");
+    printf("Prioridade: %d\n", t->prioridade);
+    printf("Categoria: %s\n", t->categoria);
+    printf("Descricao: %s\n", t->descricao);
+
+    int opcao;
+
+    // Alterar Prioridade
+    printf("Deseja alterar a prioridade? (1: Sim, 0: Nao): ");
+    scanf("%d", &opcao);
+    getchar(); 
+    if (opcao == 1) {
+        printf("Entre com a nova prioridade: ");
+        scanf("%d", &t->prioridade);
+        getchar(); 
+    }
+
+    // Alterar Categoria
+    printf("Deseja alterar a categoria? (1: Sim, 0: Nao): ");
+    scanf("%d", &opcao);
+    getchar();
+    if (opcao == 1) {
+        printf("Entre com a nova categoria: ");
+        fgets(t->categoria, sizeof(t->categoria), stdin);
+        t->categoria[strcspn(t->categoria, "\n")] = '\0';
+    }
+
+    // Alterar Descrição
+    printf("Deseja alterar a descricao? (1: Sim, 0: Nao): ");
+    scanf("%d", &opcao);
+    getchar(); 
+    if (opcao == 1) {
+        printf("Entre com a nova descricao: ");
+        fgets(t->descricao, sizeof(t->descricao), stdin);
+        t->descricao[strcspn(t->descricao, "\n")] = '\0';
+    }
+
+    return 0;
+}
+
 void exibeMenu(){
     printf("menu\n");
     printf("1. Criar tarefa\n");
     printf("2. Deletar tarefa\n");
 	printf("3. Listar tarefa\n");
+    printf("4. Alterar tarefa\n");
 	printf("0. Sair\n");
 	}
 
