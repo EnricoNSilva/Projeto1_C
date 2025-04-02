@@ -9,7 +9,7 @@
 </p>
 
 # integrantes
-<li><a href"https://github.com/GuilhermeXavier2005">Guilherme Silva Xavier</a></li>
+<li><a href="https://github.com/GuilhermeXavier2005">Guilherme Silva Xavier</a></li>
 <li><a href="https://github.com/EnricoNSilva">Enrico Nascimento Silva</a><br></li>
 Estudantes do curso de Ciências da Computação, atuamente no Segundo Ciclo<br>
 
