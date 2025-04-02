@@ -9,7 +9,9 @@ typedef struct {
 typedef struct {
     Tarefa tarefas[100];
     int qtd;
-} ListaDeTarefa;
+} 
+
+ListaDeTarefas; // o chamado da ListaDeTarefas estava com erro de digitação
 
 int criarTarefa(ListaDeTarefas *lt);
 int deletarTarefa(ListaDeTarefas *lt);
