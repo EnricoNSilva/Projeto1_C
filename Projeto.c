@@ -68,7 +68,7 @@ int carregarTarefas(ListaDeTarefas *lt, char *nome){ // a chamada do nome deveri
 }
 
 int salvarTarefas(ListaDeTarefas *lt, char *nome){
-   FILE *fp=fopen(nome, "wb")
+    FILE *fp=fopen(nome, "wb"); // Estava sem ponto e virgula
    if (fp == NULL)
    return 1;
    
