@@ -1,5 +1,6 @@
-#include "projeto.h"
-#include "stdio.h"
+#include "Projeto.h" // o nome correto para o arquivo de cabeçalho é "Projeto.h"
+#include <stdio.h> // o correto para bibliotecas padrão é ultilizar <>
+#include <stdlib.h> // o uso de <stdlib.h> é necessário para o uso de system()
 
 int main(){
 ListaDeTarefas lt;
@@ -7,11 +8,11 @@ ListaDeTarefas lt;
 char arquivo[] = "tarefas";
 int codigo, opcao;
 
-codigo=carregarTarefas(lt, arquivo);
+codigo=carregarTarefas(&lt, arquivo); //A função esperava um ponteiro e estava recebendo a variavel lt diretamente
 
 if (codigo !=0){
 printf("Lista de tarefas nao carregada");
-lt.qtd=2;
+lt.qtd = 0; // Alterado o valor de listas de 2 para 0
 }
 
 do{
