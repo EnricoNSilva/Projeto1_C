@@ -30,7 +30,7 @@ int deletarTarefa(ListaDeTarefas *lt){
    printf("Entre com a posicao que deseja deletar: ");
    scanf("%d", &pos);
    
-   if (pos <0 || pos < lt->qtd - 1)
+   if (pos <0 || pos > lt->qtd - 1) // O if estava verificando se < lt->qtd -1, porém deveria ser >, pois a posição não pode ser negativa
    return 2;
    
    for (; pos<lt->qtd-1; pos++){
