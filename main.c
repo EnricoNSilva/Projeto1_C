@@ -12,7 +12,7 @@ codigo=carregarTarefas(&lt, arquivo); //A função esperava um ponteiro e estava
 
 if (codigo !=0){
 printf("Lista de tarefas nao carregada");
-lt.qtd=2;
+lt.qtd = 0; // Alterado o valor de listas de 2 para 0
 }
 
 do{
