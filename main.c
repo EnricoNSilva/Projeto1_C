@@ -8,7 +8,7 @@ ListaDeTarefas lt;
 char arquivo[] = "tarefas";
 int codigo, opcao;
 
-codigo=carregarTarefas(lt, arquivo);
+codigo=carregarTarefas(&lt, arquivo); //A função esperava um ponteiro e estava recebendo a variavel lt diretamente
 
 if (codigo !=0){
 printf("Lista de tarefas nao carregada");
