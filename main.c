@@ -1,4 +1,4 @@
-#include "projeto.h"
+#include "Projeto.h" // o nome correto para o arquivo de cabeçalho é "Projeto.h"
 #include "stdio.h"
 
 int main(){
