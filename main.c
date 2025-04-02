@@ -55,6 +55,6 @@ int main(){
     if (codigo != 0) // Em SalvarTarefas, 0 significa sucesso e 1 significa erro(Estava retornando Erro mesmo quando o arquivo era salvo)
         printf("Erro ao salvar tarefas em arquivo");
 
-    //system ("pause");
+    system ("pause");
     return 0; // A função main estava sem retorno
 }
