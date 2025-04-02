@@ -43,7 +43,8 @@ else {
 }while (opcao != 0);
 
 codigo=salvarTarefas(&lt,arquivo);
-if(codigo ==0)
+if (codigo != 0) // Em SalvarTarefas, 0 significa sucesso e 1 significa erro
+//(Estava retornando Erro mesmo quando o arquivo era salvo)
 printf("Erro ao salvar tarefas em arquivo");
 
 
