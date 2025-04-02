@@ -1,5 +1,6 @@
 #include "Projeto.h" // o nome correto para o arquivo de cabeçalho é "Projeto.h"
 #include <stdio.h> // o correto para bibliotecas padrão é ultilizar <>
+#include <stdlib.h> // o uso de <stdlib.h> é necessário para o uso de system()
 
 int main(){
 ListaDeTarefas lt;
